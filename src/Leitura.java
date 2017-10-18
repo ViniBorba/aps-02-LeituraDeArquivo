@@ -16,14 +16,14 @@ public class Leitura {
    //e pq e preciso um FileReader dentro de um BufferReader? So o Buffer nao e suficiente?
 
             while (s.hasNext()) {
-            	int c = 0;
-            	String[] arrayStrings = new String[c];
+            	//int c = 0;
+            	//String[] arrayStrings = new String[c];
    //objeto.hasNext() "nao sei que esse metodo faz"
             	//s.reset();
                 //System.out.println("" + s.findInLine(","));
             	
-                System.out.println(s.next());
-                System.out.println("" + s.findInLine(","));
+                System.out.println(s.next() + s.findInLine(","));
+                //System.out.println(s.findInLine(","));
                 
                 //imprime o objeto.next() "esse metodo .next() existe em diferentes classes?"
                 //Se for, acho que o next() quebra a cada espacoo em branco.
