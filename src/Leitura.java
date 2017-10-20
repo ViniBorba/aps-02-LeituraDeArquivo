@@ -7,7 +7,7 @@ public class Leitura {
         Scanner s = null;//Objeto Scanner?
         int c = 0;
         //String[] arrayStrings = new String[c]
-        Object[] linhasDoArquivo = new Object[20];
+        Object[] linhasDoArquivo = new Object[10];
         
         
         
@@ -16,9 +16,16 @@ public class Leitura {
         
         while(s.hasNext()){//hasNext() boolean que verefica se existe próxima token
         	
-        	System.out.println(s.nextLine()); //nextLine() segue para a proxima linha
+        	//System.out.println(c+"ª Linha - "+s.nextLine()); //nextLine() segue para a proxima linha
+        	linhasDoArquivo[c] = s.nextLine();
+        	c = c + 1;
         }
         
+        for(Object u: linhasDoArquivo){
+        	System.out.println(u);
+        }
+        
+        System.out.print(linhasDoArquivo[9]);
         //System.out.println(s.nextLine());
         //System.out.println(s.nextLine());
         
