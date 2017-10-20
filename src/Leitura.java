@@ -10,22 +10,27 @@ public class Leitura {
         Object[] linhasDoArquivo = new Object[10];
         
         
-        
+        //s = new Scanner(new FileReader("/home/vini/Imagens/participantes.csv"));
         s = new Scanner(new BufferedReader(new FileReader("/home/vini/Imagens/participantes.csv")));
 		
         
         while(s.hasNext()){//hasNext() boolean que verefica se existe próxima token
-        	
+        //while(s.nextLine() == null){	
         	//System.out.println(c+"ª Linha - "+s.nextLine()); //nextLine() segue para a proxima linha
-        	linhasDoArquivo[c] = s.nextLine();
+        	//c = c + 1;
+        	//System.out.println(c);
+        	linhasDoArquivo[c] =  c + " "+ s.nextLine();
         	c = c + 1;
+        	//System.out.println("B"+c);
         }
         
         for(Object u: linhasDoArquivo){
+        	int p = 1;
         	System.out.println(u);
+        	p++;
         }
         
-        System.out.print(linhasDoArquivo[9]);
+        //System.out.print(linhasDoArquivo[10]);
         //System.out.println(s.nextLine());
         //System.out.println(s.nextLine());
         
