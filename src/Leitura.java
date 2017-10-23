@@ -9,12 +9,14 @@ public class Leitura {
         //String[] arrayStrings = new String[c]
         Object[] linhasDoArquivo = new Object[10];
         
+        BuscaArquivo arquivoCSV = new BuscaArquivo("/home/vini/Imagens/participantes.csv");
+        
         
         //s = new Scanner(new FileReader("/home/vini/Imagens/participantes.csv"));
         s = new Scanner(new BufferedReader(new FileReader("/home/vini/Imagens/participantes.csv")));
 		
         
-        while(s.hasNext()){//hasNext() boolean que verefica se existe próxima token
+        while(arquivoCSV.facaAte()){//hasNext() boolean que verefica se existe próxima token
         //while(s.nextLine() == null){	
         	//System.out.println(c+"ª Linha - "+s.nextLine()); //nextLine() segue para a proxima linha
         	//c = c + 1;
