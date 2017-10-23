@@ -13,11 +13,13 @@ public class BuscaArquivo {
 	}
 	
 	public boolean facaAte(){
-		return s.hasNext();
+		return s.hasNext();//hasNext() boolean que verefica se existe próxima token
 	}
 	
 	public String pulaUmaLinha(){
 		return s.nextLine();
 	}
 
+	
+	
 }

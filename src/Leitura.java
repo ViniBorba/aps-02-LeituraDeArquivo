@@ -3,32 +3,27 @@ import java.util.Scanner;
 
 public class Leitura {
     public static void main(String[] args) throws IOException {
-
-      
-        int c = 0;
+    	
+    	
+    	Scanner entrada = new Scanner(System.in);
+    	int c = 0;
         
         Object[] linhasDoArquivo = new Object[10];
+
         
         BuscaArquivo arquivoCSV = new BuscaArquivo("/home/vini/Imagens/participantes.csv");
-        
-    
-		
-        
-        while(arquivoCSV.facaAte()){//hasNext() boolean que verefica se existe próxima token
+       
+        while(arquivoCSV.facaAte()){
       
         	linhasDoArquivo[c] = arquivoCSV.pulaUmaLinha();
-        	c = c + 1;
+        	c++;
         	
         }
         
         for(Object u: linhasDoArquivo){
-        	int p = 1;
+        	
         	System.out.println(u);
-        	p++;
         }
-        
-   
-        
   
     }
 }
