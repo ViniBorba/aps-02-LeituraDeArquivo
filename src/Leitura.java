@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Leitura {
     public static void main(String[] args) throws IOException {
 
-        Scanner s = null;//Objeto Scanner?
+       // Scanner s = null;//Objeto Scanner?
         int c = 0;
         //String[] arrayStrings = new String[c]
         Object[] linhasDoArquivo = new Object[10];
@@ -13,7 +13,7 @@ public class Leitura {
         
         
         //s = new Scanner(new FileReader("/home/vini/Imagens/participantes.csv"));
-        s = new Scanner(new BufferedReader(new FileReader("/home/vini/Imagens/participantes.csv")));
+        //s = new Scanner(new BufferedReader(new FileReader("/home/vini/Imagens/participantes.csv")));
 		
         
         while(arquivoCSV.facaAte()){//hasNext() boolean que verefica se existe próxima token
@@ -21,7 +21,9 @@ public class Leitura {
         	//System.out.println(c+"ª Linha - "+s.nextLine()); //nextLine() segue para a proxima linha
         	//c = c + 1;
         	//System.out.println(c);
-        	linhasDoArquivo[c] =  c + " "+ s.nextLine();
+        	
+        	//linhasDoArquivo[c] =  c + " "+ s.nextLine();
+        	linhasDoArquivo[c] = arquivoCSV.pulaUmaLinha();
         	c = c + 1;
         	//System.out.println("B"+c);
         }

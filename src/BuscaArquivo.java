@@ -15,5 +15,9 @@ public class BuscaArquivo {
 	public boolean facaAte(){
 		return s.hasNext();
 	}
+	
+	public String pulaUmaLinha(){
+		return s.nextLine();
+	}
 
 }
